@@ -15,7 +15,7 @@ show_usage () {
 }
 
 if [[ $# -eq 0 ]];then
-   echo "No input arguments provided which is not supported"
+   echo "No input arguments provided."
    show_usage
    exit 1
 fi
