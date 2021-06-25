@@ -1,19 +1,32 @@
 {
-  "version": 1,
+  "version": 2,
   "replicas": [
     {
-      "count": 2,
+      "count": 1,
       "constraints": {
-        "rack": "east"
+        "rack": "west-1"
+      }
+    },
+    {
+      "count": 1,
+      "constraints": {
+        "rack": "east-1"
       }
     }
   ],
   "observers": [
     {
-      "count": 2,
+      "count": 1,
       "constraints": {
-        "rack": "west"
+        "rack": "west-2"
+      }
+    },
+    {
+      "count": 1,
+      "constraints": {
+        "rack": "east-2"
       }
     }
-  ]
+  ],
+  "observerPromotionPolicy": "under-min-isr"
 }
